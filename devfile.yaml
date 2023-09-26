@@ -22,6 +22,15 @@ commands:
       group:
         kind: build
 
+  - id: deploy-on-openshift
+    exec:
+      label: "Build and Deploy on Openshift"
+      component: tools
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: "npx nodeshift --strictSSL=false --expose"
+      group:
+        kind: build
+
   - id: start-application
     exec:
       label: "Start the local server"
