@@ -19,7 +19,8 @@ commands:
       component: "tools"
       workingDir: "${PROJECT_SOURCE}"
       commandLine: |
-        git config --local git user.name "Arun Hariharan"
+        git config --local credential.helper store
+        git config --local user.name "Arun Hariharan"
 
   - id: install-dependencies
     exec:
